@@ -31,7 +31,7 @@ namespace Autoloan.Models
 
         [Required]
         //[MaxLength(10)]
-        //[MinLength(10)]
+        //[MinLength(10)]doesnt work on non string types
         [RegularExpression(@"^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}")]
         public double PhoneNumber { get; set; }
 
