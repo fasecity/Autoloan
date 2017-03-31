@@ -12,10 +12,12 @@ namespace Autoloan.Models
 
         [Required]
         [StringLength(100)]
+        [RegularExpression(@"^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$")]
         public string FirstName { get; set; }
 
         [Required]
         [StringLength(100)]
+        [RegularExpression(@"^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$")]
         public string LastName { get; set; }
 
         [Required]
@@ -30,6 +32,7 @@ namespace Autoloan.Models
         [Required]
         //[MaxLength(10)]
         //[MinLength(10)]
+        [RegularExpression(@"^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}")]
         public double PhoneNumber { get; set; }
 
         [Required]
