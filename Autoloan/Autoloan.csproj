@@ -197,6 +197,10 @@
     <Compile Include="Migrations\201703310007193_DataAnnoations.Designer.cs">
       <DependentUpon>201703310007193_DataAnnoations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703310136562_PopulategenresTable.cs" />
+    <Compile Include="Migrations\201703310136562_PopulategenresTable.Designer.cs">
+      <DependentUpon>201703310136562_PopulategenresTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Applicant.cs" />
@@ -292,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703310007193_DataAnnoations.resx">
       <DependentUpon>201703310007193_DataAnnoations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703310136562_PopulategenresTable.resx">
+      <DependentUpon>201703310136562_PopulategenresTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
