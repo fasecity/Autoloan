@@ -32,29 +32,46 @@ namespace Autoloan.Controllers
         [HttpPost]
         public ActionResult Create(ApplicantFormViewModel viewModel)
         {
-            var carInsu = _context.CarInsurancs.Single(m => m.Id == viewModel.CarInsurance);
-            var applicant = new Applicant
+            
+            if (!ModelState.IsValid)
             {
-                FirstName = viewModel.FirstName,
-                LastName = viewModel.LastName,
-                Age = viewModel.Age,
-                PhoneNumber = viewModel.PhoneNumber,
-                CarInsurance = carInsu,
-                Carkilometer = viewModel.Carkilometer,
-                DesiredLoanAmmount = viewModel.DesiredLoanAmmount,
-                DateTime = DateTime.Now,
-                MonthlyIncome = viewModel.MonthlyIncome,
-                CarMake = viewModel.CarMake,
-                CarModel = viewModel.CarModel,
-                CarYear = viewModel.CarYear,
-                Email = viewModel.Email,
-                Province = viewModel.Province
+                return RedirectToAction("Index", "Home");
+            }
+           
+            try
+            {
 
-            };
-            _context.Applicants.Add(applicant);
-            _context.SaveChanges();
-            return RedirectToAction("Index", "Home");
-            //return View();
+              var  carInsu = _context.CarInsurancs.Single(m => m.Id == viewModel.CarInsurance);
+                var applicant = new Applicant
+                {
+
+                FirstName = viewModel.FirstName,
+                    LastName = viewModel.LastName,
+                    Age = viewModel.Age,
+                    PhoneNumber = viewModel.PhoneNumber,
+                    CarInsurance = carInsu,
+                    Carkilometer = viewModel.Carkilometer,
+                    DesiredLoanAmmount = viewModel.DesiredLoanAmmount,
+                    DateTime = DateTime.Now,
+                    MonthlyIncome = viewModel.MonthlyIncome,
+                    CarMake = viewModel.CarMake,
+                    CarModel = viewModel.CarModel,
+                    CarYear = viewModel.CarYear,
+                    Email = viewModel.Email,
+                    Province = viewModel.Province
+
+                };
+                _context.Applicants.Add(applicant);
+                _context.SaveChanges();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return View();
         }
     }
 }

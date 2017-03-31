@@ -20,8 +20,9 @@ namespace Autoloan.ViewModels
         public string LastName { get; set; }
 
         [Required]
-        //[MaxLength(99)]
-        //[MinLength(18)]
+        //[MaxLength(3)]
+        [Range(18, 100,
+        ErrorMessage = "Value for {0} must be over {1} .")]
         public int Age { get; set; }
 
         [Required]
@@ -30,10 +31,11 @@ namespace Autoloan.ViewModels
 
         [Required]
         //[MaxLength(10)]
-        public int PhoneNumber { get; set; }
+        //[MinLength(10)]
+        public double PhoneNumber { get; set; }
 
         [Required]
-        //[EmailAddress]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Required]
@@ -41,11 +43,14 @@ namespace Autoloan.ViewModels
         public string CarMake { get; set; }
 
         [Required]
+        [Range(2010, 2050,
+        ErrorMessage = "Value for {0} must be over {1} .")]
         public int CarYear { get; set; }
 
         [Required]
-        //[MaxLength(250000)]
-        public int Carkilometer { get; set; }
+        [Range(1, 250000,
+        ErrorMessage = "Value for {0} must be between {1} and {2}.")]
+        public double Carkilometer { get; set; }
 
         [Required]
         [StringLength(255)]

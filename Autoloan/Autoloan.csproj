@@ -202,6 +202,22 @@
     <Compile Include="Migrations\201703310136562_PopulategenresTable.Designer.cs">
       <DependentUpon>201703310136562_PopulategenresTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703311512204_changedouble.cs" />
+    <Compile Include="Migrations\201703311512204_changedouble.Designer.cs">
+      <DependentUpon>201703311512204_changedouble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703311648276_changedouble2.cs" />
+    <Compile Include="Migrations\201703311648276_changedouble2.Designer.cs">
+      <DependentUpon>201703311648276_changedouble2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703311737292_changedouble3.cs" />
+    <Compile Include="Migrations\201703311737292_changedouble3.Designer.cs">
+      <DependentUpon>201703311737292_changedouble3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703311812091_changeint.cs" />
+    <Compile Include="Migrations\201703311812091_changeint.Designer.cs">
+      <DependentUpon>201703311812091_changeint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Applicant.cs" />
@@ -302,6 +318,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703310136562_PopulategenresTable.resx">
       <DependentUpon>201703310136562_PopulategenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703311512204_changedouble.resx">
+      <DependentUpon>201703311512204_changedouble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703311648276_changedouble2.resx">
+      <DependentUpon>201703311648276_changedouble2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703311737292_changedouble3.resx">
+      <DependentUpon>201703311737292_changedouble3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703311812091_changeint.resx">
+      <DependentUpon>201703311812091_changeint.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
