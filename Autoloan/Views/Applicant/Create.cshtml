@@ -1,0 +1,84 @@
+﻿@model Autoloan.ViewModels.ApplicantFormViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Apply</h2>
+@using (Html.BeginForm("Create", "Applicant"))
+{
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Applicant Information</h4>
+            <div class="form-group">
+
+                <label>First name</label>
+                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Last name</label>
+                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                @Html.TextBoxFor(m => m.Age, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Province</label>
+                @Html.TextBoxFor(m => m.Province, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @*@Html.LabelFor(m => m.Email)*@
+                <label>Email</label>
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <h4>Car information</h4>
+            <div class="form-group">
+                <label>What is your car's make?</label>
+                @Html.TextBoxFor(m => m.CarMake, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Car model</label>
+                @Html.TextBoxFor(m => m.CarModel, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>what year is your car?</label>
+                @Html.TextBoxFor(m => m.CarYear, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>How many Kilometers does your car have?</label>
+                @Html.TextBoxFor(m => m.Carkilometer, new { @class = "form-control" })
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <h4>Loan Information</h4>
+            <div class="form-group">
+                <label>Desired loan ammount</label>
+                @Html.TextBoxFor(m => m.DesiredLoanAmmount, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>What is your monthly income</label>
+                @Html.TextBoxFor(m => m.MonthlyIncome, new { @class = "form-control" })
+            </div>
+            @*<div class="form-group">
+                    @Html.LabelFor(m => m.DateTime)
+                    @Html.TextBoxFor(m => m.DateTime, new { @class = "form-control" })
+                </div>*@
+            <div class="form-group">
+                <label>What type is your insurance coverage?</label>
+                @Html.DropDownListFor(m => m.CarInsurance, new SelectList(Model.CarInsurances, "Id", "Name"), "", new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+        <button type="submit" value="save" class="btn btn-primary">submit</button>
+}
