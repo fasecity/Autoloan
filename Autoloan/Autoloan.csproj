@@ -177,9 +177,32 @@
     <Compile Include="Migrations\201703302039060_initial.Designer.cs">
       <DependentUpon>201703302039060_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703302313380_CreateApplicantTable.cs" />
+    <Compile Include="Migrations\201703302313380_CreateApplicantTable.Designer.cs">
+      <DependentUpon>201703302313380_CreateApplicantTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703302318504_CreateApplicantTables.cs" />
+    <Compile Include="Migrations\201703302318504_CreateApplicantTables.Designer.cs">
+      <DependentUpon>201703302318504_CreateApplicantTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703302320249_CreateApplicantTablesFixed.cs" />
+    <Compile Include="Migrations\201703302320249_CreateApplicantTablesFixed.Designer.cs">
+      <DependentUpon>201703302320249_CreateApplicantTablesFixed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703302335568_CreateApplicantTablesAddCarMake.cs" />
+    <Compile Include="Migrations\201703302335568_CreateApplicantTablesAddCarMake.Designer.cs">
+      <DependentUpon>201703302335568_CreateApplicantTablesAddCarMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703310007193_DataAnnoations.cs" />
+    <Compile Include="Migrations\201703310007193_DataAnnoations.Designer.cs">
+      <DependentUpon>201703310007193_DataAnnoations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Applicant.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\CarInsurance.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -254,6 +277,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201703302039060_initial.resx">
       <DependentUpon>201703302039060_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703302313380_CreateApplicantTable.resx">
+      <DependentUpon>201703302313380_CreateApplicantTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703302318504_CreateApplicantTables.resx">
+      <DependentUpon>201703302318504_CreateApplicantTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703302320249_CreateApplicantTablesFixed.resx">
+      <DependentUpon>201703302320249_CreateApplicantTablesFixed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703302335568_CreateApplicantTablesAddCarMake.resx">
+      <DependentUpon>201703302335568_CreateApplicantTablesAddCarMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703310007193_DataAnnoations.resx">
+      <DependentUpon>201703310007193_DataAnnoations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
